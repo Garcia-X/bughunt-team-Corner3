@@ -23,3 +23,24 @@
 **Status:** Fail
 **Severity:** Major
 **V or V:** Verification
+
+---
+
+**Test ID:** XG-02
+**Written by:** Xavier Garcia
+**Title:** Submission function accepts an empty costume description
+**Traces to:** REQ-05
+**Test type:** Unit
+**Preconditions:** Logged in as `ghost_gary` with the Gallery open and browser Console available.
+**Test data:** Name: `Blank Description Test`; description: empty string `""`; category: `Spooky`.
+
+**Steps:**
+1. Open the browser Console.
+2. Enter `submitCostume("Blank Description Test", "", "Spooky")` and press Enter.
+3. Find `Blank Description Test` in the Gallery.
+
+**Expected result:** The function rejects the submission because a description is required. `Blank Description Test` does not appear in the Gallery.
+**Actual result:** `Blank Description Test` appeared in the Gallery with no description and 0 votes.
+**Status:** Fail
+**Severity:** Major
+**V or V:** Verification
